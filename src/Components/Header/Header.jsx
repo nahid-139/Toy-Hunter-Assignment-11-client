@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
 import { toast } from 'react-toastify';
+import { AuthContext } from '../Context/UseContext';
 
 const Header = () => {
 
