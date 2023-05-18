@@ -22,8 +22,8 @@ const Header = () => {
       <div className="bg-white">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full  shadow-lg md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
-          <Link to="/" title="FoodFly" className="inline-flex items-center">
-            <img src="" alt="" />
+          <Link to="/" title="Toy Hunter" className="inline-flex items-center ">
+            <img src="https://i.ibb.co/mHxybzC/images-modified.png" alt="" />
           </Link>
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
@@ -260,6 +260,7 @@ const Header = () => {
                           <img
                             className=" rounded-full  w-16"
                             src={user?.photoURL}
+                            title={user?.displayName}
                             alt=""
                           />
                         </>
