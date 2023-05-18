@@ -58,7 +58,7 @@ import { toast } from "react-hot-toast";
     return (
       <div className="lg:flex sm:flex-col py-20 lg:flex-row justify-evenly">
         <div className="">
-         
+        <img src='https://www.godealergo.com/assets/images/secure-login.gif'alt="" />
         </div>
         <div className="lg:w-1/2 max-w-md p-8 space-y-3 rounded-xl shadow-xl  bg-slate-300 dark:text-gray-100">
           <h1 className="text-2xl font-bold text-center py-2">Login</h1>
