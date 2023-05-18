@@ -64,7 +64,7 @@ const Register = () => {
   return (
     <div className="flex py-20  justify-evenly">
       <div className="w-1/2">
-        <img src="" alt="" />
+        <img src="https://cdn.dribbble.com/users/612155/screenshots/1718172/dribbble_ordi.gif" alt="" />
       </div>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl shadow-xl bg-amber-100 dark:text-gray-100">
         <h1 className="text-2xl font-bold text-center py-2">Register</h1>
