@@ -28,7 +28,7 @@ const Header = () => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <Link
-                to="/home"
+                to="/"
                 className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Home
@@ -46,18 +46,18 @@ const Header = () => {
               <>
                 <li>
                   <Link
-                    to="/reviews"
+                    to="/allToys"
                     className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
                   >
-                    My Reviews
+                    All Toys
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/addservice"
+                    to="/addToys"
                     className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
-                  >
-                     Add Services
+                  >Add Toys
+                     
                   </Link>
                 </li>
               </>
@@ -66,10 +66,10 @@ const Header = () => {
             )}
             <li>
                   <Link
-                    to="/services"
+                    to="/myToys"
                     className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
                   >
-                   My Services
+                   My Toys
                   </Link>
                 </li>
           </ul>
@@ -97,7 +97,7 @@ const Header = () => {
                     aria-label="Sign up"
                     title="Sign up"
                   >
-                    Sign In
+                    Log In
                   </Link>
                 </li>
               </>
@@ -175,7 +175,7 @@ const Header = () => {
                     <ul className="space-y-4">
                       <li>
                         <Link
-                          to="/home"
+                          to="/"
                           aria-label="Our product"
                           title="Our product"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -195,32 +195,32 @@ const Header = () => {
                       </li>
                       <li>
                             <Link
-                              to="/services"
+                              to="/myToys"
                               aria-label="About us"
                               title="About us"
                               className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
                             >
-                            My Services
+                            My Toys
                             </Link>
                           </li>
                       {user?.email ? (
                         <>
                           <li>
                             <Link
-                              to="/reviews"
+                              to="/allToys"
                               className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
                             >
-                              My Reviews
+                              All Toys
                             </Link>
                           </li>
                           <li>
                             <Link
-                              to="/addservice"
+                              to="/addToys"
                               aria-label="About us"
                               title="About us"
                               className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
                             >
-                            Add Services
+                            Add Toys
                             </Link>
                           </li>
                         </>
