@@ -18,6 +18,8 @@ const Register = () => {
     const name=from.name.value
     const email = from.email.value;
     const password = from.password.value;
+    const photoURL=from.Photo.value;
+
     console.log(name,email,password)
     createUser(email,password)
     .then((result)=>{
@@ -28,7 +30,7 @@ const Register = () => {
         'You clicked the button!',
         'success'
       )
-      updateprofile(name)
+      updateprofile(name,photoURL)
       .then(()=>{
         Swal.fire(
             'Good job!',
