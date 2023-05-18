@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const Header = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        toast.success("Sign-out successful");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
     return (
       <div className="bg-white">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full  shadow-lg md:px-24 lg:px-8">
@@ -27,7 +41,7 @@ const Header = () => {
                 Blog
               </Link>
             </li>
-
+            {user?.email ? (
               <>
                 <li>
                   <Link
@@ -46,9 +60,9 @@ const Header = () => {
                   </Link>
                 </li>
               </>
-      
+            ) : (
               <></>
-          
+            )}
             <li>
                   <Link
                     to="/services"
@@ -59,10 +73,11 @@ const Header = () => {
                 </li>
           </ul>
           <ul className="flex items-center hidden space-x-8 lg:flex">
+            {user?.uid ? (
               <>
                 <li>
                   <Link
-                   
+                    onClick={handleLogout}
                     className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-500 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                     aria-label="Sign up"
                     title="Sign up"
@@ -70,9 +85,9 @@ const Header = () => {
                     LogOut
                   </Link>
                 </li>
-                <li className=" text-lg font-medium"></li>
+                <li className=" text-lg font-medium">{user?.displayName}</li>
               </>
-           
+            ) : (
               <>
                 <li>
                   <Link
@@ -85,29 +100,29 @@ const Header = () => {
                   </Link>
                 </li>
               </>
-          
-           
+            )}
+            {user?.email ? (
               <>
                 <img
                   className=" rounded-full  w-16"
-                  src=""
+                  src={user?.photoURL}
                   alt=""
                 />
               </>
-            
+            ) : (
               <>
                 <span>
                   <FaUser></FaUser>
                 </span>
               </>
-          
+            )}
           </ul>
           <div className="lg:hidden">
             <button
               aria-label="Open Menu"
               title="Open Menu"
               className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-              
+              onClick={() => setIsMenuOpen(true)}
             >
               <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
                 <path
@@ -124,7 +139,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-            
+            {isMenuOpen && (
               <div className="absolute top-0 left-0 w-full">
                 <div className="p-5 bg-white border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
@@ -144,7 +159,7 @@ const Header = () => {
                         aria-label="Close Menu"
                         title="Close Menu"
                         className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        
+                        onClick={() => setIsMenuOpen(false)}
                       >
                         <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
                           <path
@@ -187,7 +202,7 @@ const Header = () => {
                             My Services
                             </Link>
                           </li>
-                      
+                      {user?.email ? (
                         <>
                           <li>
                             <Link
@@ -208,11 +223,14 @@ const Header = () => {
                             </Link>
                           </li>
                         </>
-                      
+                      ) : (
+                        <></>
+                      )}
+                      {user?.email ? (
                         <>
                           <li>
                             <Link
-                              
+                              onClick={logOut}
                               className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide bg-blue-600 text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                               aria-label="Sign In"
                               title="Sign In"
@@ -220,9 +238,9 @@ const Header = () => {
                               LogOut
                             </Link>
                           </li>
-                          <li></li>
+                          <li>{user?.displayName}</li>
                         </>
-                     
+                      ) : (
                         <>
                           <li>
                             <Link
@@ -235,26 +253,27 @@ const Header = () => {
                             </Link>
                           </li>
                         </>
-                     
-                      
+                      )}
+                      {user?.email ? (
                         <>
                           <img
                             className=" rounded-full  w-16"
-                            src=""
+                            src={user?.photoURL}
                             alt=""
                           />
                         </>
-                    
+                      ) : (
                         <>
                           <span>
-                           <FaUser></FaUser>
+                            <FaUser></FaUser>
                           </span>
                         </>
-                    
+                      )}
                     </ul>
                   </nav>
                 </div>
               </div>
+            )}
           </div>
         </div>
       </div>
