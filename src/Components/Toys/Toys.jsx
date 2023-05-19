@@ -1,4 +1,6 @@
-import React, { useEffect, useState }  from 'react';
+import React, { useEffect, useState } from 'react';
+import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 
 
@@ -6,82 +8,166 @@ const Toys = () => {
 
 
     const [toys, setToys] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/toys")
-      .then((response) => response.json())
-      .then((data) => setToys(data));
-  }, []);
-  console.log(toys);
+    useEffect(() => {
+        fetch("http://localhost:5000/toys")
+            .then((response) => response.json())
+            .then((data) => setToys(data));
+    }, []);
+    console.log(toys);
     return (
-        <div >
+        <div className='mb-20' >
+            <h1 className='font-bold text-4xl mb-10 text-center underline'>Our Toys</h1>
+
             <Tabs>
-            <TabList className={'flex justify-center font-bold text-2xl gap-10'}> 
-                  <Tab className={'bg-slate-500 px-20 py-2 rounded-xl'}>Marvel Toys</Tab>
-                  <Tab className={'bg-slate-500 px-20 py-2 rounded-xl'}>Avengers Toys</Tab>
-                  <Tab className={'bg-slate-500 px-20 py-2 rounded-xl'}>Star Wars Toys</Tab>
+                <TabList className={'flex justify-center font-bold text-2xl gap-10'}>
+                    <Tab className={'bg-slate-500 px-20 py-2 rounded-xl hover:bg-slate-400'}>Marvel Toys</Tab>
+                    <Tab className={'bg-slate-500 px-20 py-2 rounded-xl hover:bg-slate-400'}>Avengers Toys</Tab>
+                    <Tab className={'bg-slate-500 px-20 py-2 rounded-xl hover:bg-slate-400'}>Star Wars Toys</Tab>
 
                 </TabList>
-            {
-                toys.map (toy => <div
-                    key={toy.id}
-                    
-                > 
-                
-            
-                <TabPanel>
-                  <p>
-                    <b>Marvel</b> 
-                    <img src="https://brincamundo.com.br/wp-content/uploads/2023/04/action-figure-iron-man-mark42-pose-suporte.webp" alt="" />
-                    <h1>{toy.subcategories[0].name}</h1>
-                    <div>
-                        <h1>{toy.subcategories[1].name}</h1>
-                    </div>
-                  </p>
-                  <p>
-                    Source:{' '}
-                    <a href="https://en.wikipedia.org/wiki/Mario" target="_blank">
-                      Wikipedia
-                    </a>
-                  </p>
-                </TabPanel>
-                <TabPanel>
-                  <p>
-                    <b>Luigi</b> (<i>Japanese: ルイージ Hepburn: Ruīji, [ɾɯ.iː.dʑi̥]</i>) (<i>English: /luˈiːdʒi/;
-                    Italian: [luˈiːdʒi]</i>) is a fictional character featured in video games and related media
-                    released by Nintendo. Created by prominent game designer Shigeru Miyamoto, Luigi is portrayed
-                    as the slightly younger but taller fraternal twin brother of Nintendo's mascot Mario, and
-                    appears in many games throughout the Mario franchise, often as a sidekick to his brother.
-                  </p>
-                  <p>
-                    Source:{' '}
-                    <a href="https://en.wikipedia.org/wiki/Luigi" target="_blank">
-                      Wikipedia
-                    </a>
-                  </p>
-                </TabPanel>
-                <TabPanel>
-                  <p>
-                    <b>Princess Peach</b> (<i>Japanese: ピーチ姫 Hepburn: Pīchi-hime, [piː.tɕi̥ çi̥.me]</i>)
-                    is a character in Nintendo's Mario franchise. Originally created by Shigeru Miyamoto,
-                    Peach is the princess of the fictional Mushroom Kingdom, which is constantly under
-                    attack by Bowser. She often plays the damsel in distress role within the series and
-                    is the lead female. She is often portrayed as Mario's love interest and has appeared
-                    in Super Princess Peach, where she is the main playable character.
-                  </p>
-                  <p>
-                    Source:{' '}
-                    <a href="https://en.wikipedia.org/wiki/Princess_Peach" target="_blank">
-                      Wikipedia
-                    </a>
-                  </p>
-                </TabPanel>
-              
+                {
+                    toys.map(toy => <div
+                        key={toy.id}
+
+                    >
+
+                        {/* Marvel Cards */}
+                        <TabPanel>
+                            <div className='flex justify-center gap-10 mt-10'>
+                                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
+                                    <Link>
+                                        <img className="rounded-t-lg" src={toy.categories[0].picture} alt="" />
+                                    </Link>
+                                    <div className="p-5">
+                                        <Link>
+                                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{toy.categories[0].name}</h5>
+                                        </Link>
+                                        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Price: </span>{toy.categories[0].price}$</p>
+                                        <div className='flex'>
+                                            <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[0].rating}</p>
+                                            <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
+                                        </div>
+                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            View Details
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
+                                    <Link>
+                                        <img className="rounded-t-lg" src={toy.categories[1].picture} alt="" />
+                                    </Link>
+                                    <div className="p-5">
+                                        <Link>
+                                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{toy.categories[1].name}</h5>
+                                        </Link>
+                                        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Price: </span>{toy.categories[1].price}$</p>
+                                        <div className='flex'>
+                                            <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[1].rating}</p>
+                                            <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
+                                        </div>
+                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            View Details
+
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </TabPanel>
+
+                        {/* Avengers card */}
+                        <TabPanel>
+                            <div className='flex justify-center gap-10 mt-10'>
+                                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
+                                    <Link>
+                                        <img className="rounded-t-lg" src={toy.categories[2].picture} alt="" />
+                                    </Link>
+                                    <div className="p-5">
+                                        <Link>
+                                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{toy.categories[2].name}</h5>
+                                        </Link>
+                                        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Price: </span>{toy.categories[2].price}$</p>
+                                        <div className='flex'>
+                                            <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[2].rating}</p>
+                                            <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
+                                        </div>
+                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            View Details
+
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
+                                    <Link>
+                                        <img className="rounded-t-lg" src={toy.categories[3].picture} alt="" />
+                                    </Link>
+                                    <div className="p-5">
+                                        <Link>
+                                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{toy.categories[3].name}</h5>
+                                        </Link>
+                                        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Price: </span>{toy.categories[3].price}$</p>
+                                        <div className='flex'>
+                                            <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[3].rating}</p>
+                                            <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
+                                        </div>
+                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            View Details
+
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </TabPanel>
+
+                        {/* Star Wars Card */}
+                        <TabPanel>
+                            <div className='flex justify-center gap-10 mt-10'>
+                                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
+                                    <Link>
+                                        <img className="rounded-t-lg" src={toy.categories[4].picture} alt="" />
+                                    </Link>
+                                    <div className="p-5">
+                                        <Link>
+                                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{toy.categories[4].name}</h5>
+                                        </Link>
+                                        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Price: </span>{toy.categories[4].price}$</p>
+                                        <div className='flex'>
+                                            <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[4].rating}</p>
+                                            <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
+                                        </div>
+                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            View Details
+
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
+                                    <Link>
+                                        <img className="rounded-t-lg" src={toy.categories[5].picture} alt="" />
+                                    </Link>
+                                    <div className="p-5">
+                                        <Link>
+                                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{toy.categories[5].name}</h5>
+                                        </Link>
+                                        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Price: </span>{toy.categories[5].price}$</p>
+                                        <div className='flex'>
+                                            <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[5].rating}</p>
+                                            <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
+                                        </div>
+                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            View Details
+
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </TabPanel>
 
 
-                </div>)
-            }
-</Tabs>
-          
+
+                    </div>)
+                }
+            </Tabs>
+
         </div>
     );
 };
