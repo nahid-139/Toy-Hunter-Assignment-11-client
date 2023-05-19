@@ -22,7 +22,7 @@ const Header = () => {
       <div className="bg-white">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full  shadow-lg md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
-          <Link to="/" title="Toy Hunter" className="inline-flex items-center w-32 ">
+          <Link to="/" title="Toy Hunter" className="inline-flex items-center w-20 ">
             <img src="https://i.ibb.co/zmyP8gv/HD-wallpaper-batman-logo-batman-superheroes-logo-modified.png" alt="" />
             <p className='text-3xl font-bold'>Toy Hunter</p>
           </Link>
