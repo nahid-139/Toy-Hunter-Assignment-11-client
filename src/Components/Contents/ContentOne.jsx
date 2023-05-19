@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContentOne = () => {
     return (
-        <div>
+        <div className='bg-zinc-400 rounded-xl mb-20'>
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
