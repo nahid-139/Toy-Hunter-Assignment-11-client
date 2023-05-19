@@ -7,7 +7,7 @@ const ContentOne = () => {
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
-            <svg className="text-teal-900 w-7 h-7" viewBox="0 0 24 24">
+            <svg className="text-teal-900 w-7 h-7 " viewBox="0 0 24 24">
               <polyline
                 fill="none"
                 stroke="currentColor"
