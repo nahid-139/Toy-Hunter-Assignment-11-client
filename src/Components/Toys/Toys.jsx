@@ -19,7 +19,7 @@ const Toys = () => {
             <h1 className='font-bold text-4xl mb-10 text-center underline'>Our Toys</h1>
 
             <Tabs>
-                <TabList className={'flex justify-center font-bold text-2xl gap-10'}>
+                <TabList className={'md:flex justify-center font-bold text-2xl gap-10 '}>
                     <Tab className={'bg-slate-500 px-20 py-2 rounded-xl hover:bg-slate-400'}>Marvel Toys</Tab>
                     <Tab className={'bg-slate-500 px-20 py-2 rounded-xl hover:bg-slate-400'}>Avengers Toys</Tab>
                     <Tab className={'bg-slate-500 px-20 py-2 rounded-xl hover:bg-slate-400'}>Star Wars Toys</Tab>
@@ -33,7 +33,7 @@ const Toys = () => {
 
                         {/* Marvel Cards */}
                         <TabPanel>
-                            <div className='flex justify-center gap-10 mt-10'>
+                            <div className='md:flex justify-center gap-10 mt-10'>
                                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
                                     <Link>
                                         <img className="rounded-t-lg" src={toy.categories[0].picture} alt="" />
@@ -47,7 +47,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[0].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
                                         </Link>
                                     </div>
@@ -65,7 +65,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[1].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -76,7 +76,7 @@ const Toys = () => {
 
                         {/* Avengers card */}
                         <TabPanel>
-                            <div className='flex justify-center gap-10 mt-10'>
+                            <div className='md:flex justify-center gap-10 mt-10'>
                                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
                                     <Link>
                                         <img className="rounded-t-lg" src={toy.categories[2].picture} alt="" />
@@ -90,7 +90,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[2].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -109,7 +109,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[3].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -120,7 +120,7 @@ const Toys = () => {
 
                         {/* Star Wars Card */}
                         <TabPanel>
-                            <div className='flex justify-center gap-10 mt-10'>
+                            <div className='md:flex justify-center gap-10 mt-10'>
                                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
                                     <Link>
                                         <img className="rounded-t-lg" src={toy.categories[4].picture} alt="" />
@@ -134,7 +134,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[4].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -153,7 +153,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[5].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>

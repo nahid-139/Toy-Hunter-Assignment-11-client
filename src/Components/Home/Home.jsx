@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import Banner from '../Banner/Banner';
 import Gallery from '../Gallery/Gallery';
 import Toys from '../Toys/Toys';
+import ContentOne from '../Contents/ContentOne';
 
 const Home = () => {
 
@@ -12,9 +13,9 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Toys></Toys>
-
-          
+            <ContentOne></ContentOne>
             
+          
         </div>
     );
 };
