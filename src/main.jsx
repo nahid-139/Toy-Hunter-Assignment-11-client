@@ -11,6 +11,10 @@ import UseContext from './Components/Context/UseContext';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import AddToys from './Components/AddToys/AddToys';
+import MyToys from './Components/MyToys/MyToys';
+import AllToys from './Components/AllToys/AllToys';
+import ToyDetails from './assets/ToyDetails/ToyDetails';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,25 @@ const router = createBrowserRouter([
       {
         path:'register',
         element:<Register></Register>
+      },
+      {
+        path:'/addToys',
+        element:<AddToys></AddToys>
+      },
+      {
+        path:'/myToys',
+        element:<MyToys></MyToys>
+      },
+      {
+        path:'/allToys',
+        element:<AllToys></AllToys>,
+        loader:()=>fetch('http://localhost:5000/toysAdd')
+
+      },
+      {
+        path:'/toys/:id',
+        element:<ToyDetails></ToyDetails>,
+        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
       }
     ]
 

@@ -1,7 +1,6 @@
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React, { useContext } from "react";
-import toast from "react-hot-toast";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import {  FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { auth, AuthContext } from "../Context/UseContext";
 import Swal from "sweetalert2";
@@ -27,14 +26,14 @@ const Register = () => {
       console.log(user)
       Swal.fire(
         'Good job!',
-        'You clicked the button!',
+        'You are SignUp !',
         'success'
       )
       updateprofile(name,photoURL)
       .then(()=>{
         Swal.fire(
             'Good job!',
-            'You clicked the button!',
+            'You are SignUp!',
             'success'
           )
       })

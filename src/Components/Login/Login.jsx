@@ -3,13 +3,11 @@ import {
     signInWithPopup,
   } from "firebase/auth";
   import { useContext } from "react";
-//   import toast from "react-hot-toast";
   import { FaGoogle } from "react-icons/fa";
   import { Link, useLocation, useNavigate } from "react-router-dom";
   import { auth, AuthContext } from "../Context/UseContext";
 import { toast } from "react-hot-toast";
-//   import login from "../../../Images/38435-register.gif";
-//   import UseTitle from "../../Shares/UseTitle/UseTitle";
+import Swal from "sweetalert2";
   const Login = () => {
    
     const { signIn } = useContext(AuthContext);
@@ -36,6 +34,11 @@ import { toast } from "react-hot-toast";
           console.log(user);
           from.reset()
           navigate(froms,{replace:true})
+          Swal.fire(
+            'Good job!',
+            'You are LogIn !',
+            'success'
+          )
         })
         .catch((error) => {
           console.log(error);
@@ -47,7 +50,11 @@ import { toast } from "react-hot-toast";
         .then((result) => {
           const user = result.user;
           console.log(user);
-          toast.success("successfully Your Google SignIn");
+          Swal.fire(
+            'Good job!',
+            'You are LogIn !',
+            'success'
+          )
         })
         .catch((error) => {
           console.error(error);
