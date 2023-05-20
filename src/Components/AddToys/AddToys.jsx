@@ -92,7 +92,7 @@ const AddToys = () => {
           <input
             type="text"
             name="user"
-            defaultValue={user.displayName}
+            defaultValue={user?.displayName}
             placeholder="Seller Name"
             className="w-full px-4 text-lg py-3 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
           />
@@ -108,7 +108,7 @@ const AddToys = () => {
           <input
             type="text"
             name="email"
-            defaultValue={user.email}
+            defaultValue={user?.email}
             placeholder=" Seller Email"
             className="w-full px-4 text-lg py-3 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
           />
