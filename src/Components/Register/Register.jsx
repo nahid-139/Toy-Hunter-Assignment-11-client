@@ -68,7 +68,7 @@ const Register = () => {
       <div className="w-1/2">
         <img src="https://cdn.dribbble.com/users/612155/screenshots/1718172/dribbble_ordi.gif" alt="" />
       </div>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl shadow-xl bg-amber-100 dark:text-gray-100">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl shadow-xl bg-amber-100 dark:text-gray-900">
         <h1 className="text-2xl font-bold text-center py-2">Register</h1>
         <form
           onSubmit={handleSubmit}
@@ -85,10 +85,10 @@ const Register = () => {
               className="w-full px-4 text-lg py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
             />
           </div>
-          <div className="mb-1 sm:mb-2">
+          <div className="space-y-1 text-sm">
                     <label
                       htmlFor="PhotoURL"
-                      className="text-xl inline-block mb-1 font-medium"
+                      className="block text-xl dark:text-gray-700"
                     >
                      PhotoURL
                     </label>
@@ -96,7 +96,7 @@ const Register = () => {
                       placeholder="Enter Your ImageUrl"
                       required
                       type="text"
-                      className="text-xl flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                      className="w-full px-4 text-lg py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
                       id="PhotoURL"
                       name="Photo"
                     />
@@ -144,7 +144,7 @@ const Register = () => {
         </div>
         <p className="text-lg text-center sm:px-6 dark:text-gray-400">
           Already  have an account?
-          <Link to="/login" className="underline dark:text-gray-100">
+          <Link to="/login" className="underline dark:text-gray-900">
             SignIn
           </Link>
         </p>

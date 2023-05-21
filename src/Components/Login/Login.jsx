@@ -18,7 +18,7 @@ import UseTitle from "../UseTitle/UseTitle";
     const loaction= useLocation()
   
   
-//    UseTitle('Login')
+
   const froms= loaction.state?.from?.pathname || '/';
   
   
@@ -68,7 +68,7 @@ import UseTitle from "../UseTitle/UseTitle";
         <div className="">
         <img src='https://www.godealergo.com/assets/images/secure-login.gif'alt="" />
         </div>
-        <div className="lg:w-1/2 max-w-md p-8 space-y-3 rounded-xl shadow-xl  bg-slate-300 dark:text-gray-100">
+        <div className="lg:w-1/2 max-w-md p-8 space-y-3 rounded-xl shadow-xl  bg-slate-300 dark:text-gray-900">
           <h1 className="text-2xl font-bold text-center py-2">Login</h1>
           <form
             onSubmit={handleSubmit}
@@ -125,7 +125,7 @@ import UseTitle from "../UseTitle/UseTitle";
           </div>
           <p className="text-lg text-center sm:px-6 dark:text-gray-400">
             Don't have an account?
-            <Link to="/register" className="underline dark:text-gray-100">
+            <Link to="/register" className="underline dark:text-gray-900">
               Register
             </Link>
           </p>
