@@ -47,7 +47,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[0].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
+                                        <Link to={'/allToys'} className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
                                         </Link>
                                     </div>
@@ -65,7 +65,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[1].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
+                                        <Link to={'/allToys'} className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -90,7 +90,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[2].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link to={`/toys/${toy._id}`} className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
+                                        <Link to={'/allToys'} className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -109,7 +109,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[3].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
+                                        <Link to={'/allToys'} className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -134,7 +134,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[4].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
+                                        <Link to={'/allToys'} className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>
@@ -153,7 +153,7 @@ const Toys = () => {
                                             <p className="mb-3 font-bold text-gray-700 dark:text-gray-400"><span className='font-bold text-xl'>Ratings : </span>{toy.categories[5].rating}</p>
                                             <FaStar className='mt-2 ml-2 text-slate-100'></FaStar>
                                         </div>
-                                        <Link className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
+                                        <Link to={'/allToys'} className="inline-flex items-center px-32 py-2 text-sm font-medium text-center text-slate-200 bg-slate-400 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-slate-400 dark:hover:bg-slate-500 dark:focus:ring-black">
                                             View Details
 
                                         </Link>

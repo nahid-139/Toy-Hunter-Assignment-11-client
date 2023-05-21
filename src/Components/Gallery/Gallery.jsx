@@ -14,13 +14,13 @@ const Gallery = () => {
         </div>
       </a>
       <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
-        <span className="inline-block mb-2">The brown fox</span>
-        <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100"></div>
+        <span className="inline-block mb-2">The Toy Gallery</span>
+        <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100 ">
+        
+        </div>
       </h2>
     </div>
-    <p className="w-full text-gray-700 lg:text-sm lg:max-w-md">
-      "Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut perspiciatis unde omnis iste."
-    </p>
+    
   </div>
   <div className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8">
     <div>

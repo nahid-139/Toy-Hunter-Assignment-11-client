@@ -51,17 +51,15 @@ const ContentOne = () => {
           </div>
           <div className="max-w-xl mb-6">
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Let us handle
+            Toy Safety  to Ensure
               <br className="hidden md:block" />
-              your next{' '}
+              Regulations Strengthened{' '}
               <span className="inline-block text-deep-purple-accent-400">
-                destination
+              Child Well-being
               </span>
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae. explicabo.
+            Imagination and Creativity: Toys stimulate children's imagination and encourage creative thinking. They can inspire storytelling, role-playing, and the creation of imaginary worlds. Imaginative play with toys helps children develop their communication skills, empathy, and emotional intelligence.
             </p>
           </div>
           <div>

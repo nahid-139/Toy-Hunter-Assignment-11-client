@@ -13,10 +13,11 @@ UseTitle('Home')
     return (
         <div className='mx-20  '>
             <Banner></Banner>
+            <ContentTwo></ContentTwo>
             <Gallery></Gallery>
             <Toys></Toys>
             <ContentOne></ContentOne>
-            <ContentTwo></ContentTwo>
+            
             
           
         </div>
