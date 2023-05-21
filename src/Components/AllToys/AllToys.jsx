@@ -1,67 +1,73 @@
 import React from 'react';
+import { FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const AllToys = () => {
     const user = useLoaderData();
     return (
-        <div>
+        <div className='m-10'>
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" className="px-6 py-3">
+                    Saller name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Sub-Category
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" className="px-6 py-3">
+                   Quantity
+                </th>
+                <th scope="col" className="px-6 py-3">
+                   Rating
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
             {
                 user.map((allToy=>(
 
-                    <div key={allToy.id}
+                    <tr key={allToy.id} className='text-black'
                     >
-                        <div className="container subCategory p-2 mx-auto sm:p-4 dark:text-gray-100">
-	<div className="overflow-x-auto">
-		<table className="w-full p-6 text-xs text-left whitespace-nowrap">
-			<colgroup>
-				<col/>
-				<col/>
-				<col/>
-				<col/>
-				<col/>
-				<col/>
-				<col className="w-5"/>
-			</colgroup>
-			<tbody className="border-b dark:bg-gray-900 dark:border-gray-700">
-				<tr>
-					
-					<td className="px-3 py-2">
-						<span>Saller Name</span>
-						<p className="dark:text-gray-400">{allToy.user}</p>
-					</td>
-					<td className="px-3 py-2">
-						<span>Toy Name</span>
-						<p className="dark:text-gray-400">{allToy.name}</p>
-					</td>
-					<td className="px-3 py-2">
-						<span>Sub-Category</span>
-						<p className="dark:text-gray-400">{allToy.subCategory}</p>
-					</td>
-					<td className="px-3 py-2">
-						<span>Price</span>
-						<p className="dark:text-gray-400">{allToy.price}$</p>
-					</td>
-					<td className="px-3 py-2">
-						<span>Quantity</span>
-						<p className="dark:text-gray-400">{allToy.quantity} ps</p>
-					</td>
-					
-					<td className="px-3 py-2">
-                    <Link to={`/toys/${allToy._id}`} className='bg-slate-600 px-4 py-2 text-white font-bold rounded-xl'>View details</Link>
-					</td>
-				</tr>
-				
-			</tbody>
-			
-		</table>
-	</div>
-</div>
+                     <th scope="row" className="">
+                    {allToy.user}
+                </th>
+                     <th scope="row" className="">
+                    {allToy.name}
+                </th>
+                <td className="px-6 py-4">
+                    {allToy.subCategory}
+                </td>
+                <td className="px-6 py-4">
+                    {allToy.price}$
+                </td>
+                <td className="px-6 py-4">
+                    {allToy.quantity}
+                </td>
+                <td className="px-6 py-4">
+                    {allToy.ratings}<FaStar></FaStar>
+                </td>
+                <td className="px-6 py-4">
+                <Link to={`/toys/${allToy._id}`} className='bg-slate-600 px-4 py-2 text-white font-bold rounded-xl'>View details</Link>
+                </td>
                         
                 
-                    </div>
+                    </tr>
                 )))
             }
-            
+            </tbody>
+			</table>
+			</div>
         </div>
     );
 };

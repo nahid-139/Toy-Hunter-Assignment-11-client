@@ -18,7 +18,7 @@ const AddToys = () => {
     console.log(name, img, price, ratings, subCategory , description);
 
 
-    fetch("http://localhost:5000/toysAdd", {
+    fetch("http://localhost:5005/toysAdd", {
       method: "POST",
       headers: {
         "content-type": "application/json",
