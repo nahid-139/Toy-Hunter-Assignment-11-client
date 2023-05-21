@@ -14,7 +14,7 @@ import ErrorPage from './Components/ErrorPage/ErrorPage';
 import AddToys from './Components/AddToys/AddToys';
 import MyToys from './Components/MyToys/MyToys';
 import AllToys from './Components/AllToys/AllToys';
-import ToyDetails from './assets/ToyDetails/ToyDetails';
+import ToyDetails from './Components/ToyDetails/ToyDetails';
 
 const router = createBrowserRouter([
   {
