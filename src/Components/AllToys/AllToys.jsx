@@ -1,29 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaSearch, FaStar } from 'react-icons/fa';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import UseTitle from '../UseTitle/UseTitle';
 
 const AllToys = () => {
     UseTitle('All Toys')
+    const [allToys, setAllToys] = useState([]);
+    const [search, setSearch] = useState("");
+    useEffect(() => {
+        fetch("http://localhost:5005/toysAdd")
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setAllToys(data);
+          });
+      }, []);
 
+      const handleSearchBar = () => {
+        fetch(`http://localhost:5005/getToys/${search}`)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setAllToys(data);
+          });
+      };
 
-
-
-
-    
-    const user = useLoaderData();
     return (
         <div className='m-10'>
             <h1 className="text-center p-4 font-bold text-3xl">ALL My Toys</h1>
         <div className="search-box p-2 text-center  ">
           <input
-            // onChange={(e) => setSearchText(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
             type="text"
             className="px-10 border-4 border-slate-600 rounded-xl" 
-          />
-          {/* {" "} */}
-          {/* onClick={handleSearch} */}
-          <button className='ml-2 p-2 bg-slate-600 rounded-xl'><FaSearch></FaSearch></button>
+          /> {" "}
+          
+          <button onClick={handleSearchBar} className='ml-2 p-2 bg-slate-600 rounded-xl'><FaSearch></FaSearch></button>
         </div>
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -54,7 +66,7 @@ const AllToys = () => {
         </thead>
         <tbody>
             {
-                user.map((allToy=>(
+                allToys.map((allToy=>(
 
                     <tr key={allToy.id} className='text-black'
                     >
