@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+import UseTitle from '../UseTitle/UseTitle';
 
 const AllToys = () => {
+    UseTitle('All Toys')
     const user = useLoaderData();
     return (
         <div className='m-10'>

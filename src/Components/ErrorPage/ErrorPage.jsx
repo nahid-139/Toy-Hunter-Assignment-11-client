@@ -1,11 +1,13 @@
 import React from "react";
 import { Link, useRouteError } from "react-router-dom";
+import UseTitle from "../UseTitle/UseTitle";
 const ErrorPage = () => {
-  
+  UseTitle('Error')
     const error = useRouteError();
     console.error(error);
 
   return (
+
     <div>
       <section className="flex items-center    bg-white text-black">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto ">

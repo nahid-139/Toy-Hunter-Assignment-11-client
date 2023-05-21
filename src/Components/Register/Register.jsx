@@ -4,10 +4,11 @@ import {  FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { auth, AuthContext } from "../Context/UseContext";
 import Swal from "sweetalert2";
+import UseTitle from "../UseTitle/UseTitle";
 
 
 const Register = () => {
-  
+  UseTitle("Sign Up")
   const {createUser,updateprofile}= useContext(AuthContext)
   const googleProvider= new GoogleAuthProvider()
 

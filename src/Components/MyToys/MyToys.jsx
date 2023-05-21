@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Context/UseContext';
 import { Link } from 'react-router-dom';
 import { FaEdit, FaStar } from 'react-icons/fa';
+import UseTitle from '../UseTitle/UseTitle';
 
 const MyToys = () => {
-
+UseTitle('My Toys')
     const {user} =useContext(AuthContext)
 
     const [toy,setToy] =useState([])

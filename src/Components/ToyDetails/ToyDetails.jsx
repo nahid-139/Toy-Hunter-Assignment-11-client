@@ -2,8 +2,10 @@ import React from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
+import UseTitle from '../UseTitle/UseTitle';
 
 const ToyDetails = () => {
+    UseTitle('Toy Details')
     const toys = useLoaderData()
     return (
         <div className='mb-20 bg-gray-400 mx-40 p-20 rounded-xl'>

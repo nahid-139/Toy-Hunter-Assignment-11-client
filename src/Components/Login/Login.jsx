@@ -8,8 +8,9 @@ import {
   import { auth, AuthContext } from "../Context/UseContext";
 import { toast } from "react-hot-toast";
 import Swal from "sweetalert2";
+import UseTitle from "../UseTitle/UseTitle";
   const Login = () => {
-   
+   UseTitle('Log In')
     const { signIn } = useContext(AuthContext);
  
     const googleProvider = new GoogleAuthProvider();

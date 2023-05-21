@@ -4,9 +4,10 @@ import Gallery from '../Gallery/Gallery';
 import Toys from '../Toys/Toys';
 import ContentOne from '../Contents/ContentOne';
 import ContentTwo from '../Contents/ContentTwo';
+import UseTitle from '../UseTitle/UseTitle';
 
 const Home = () => {
-
+UseTitle('Home')
    
 
     return (
