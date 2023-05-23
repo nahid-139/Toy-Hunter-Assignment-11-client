@@ -9,7 +9,7 @@ UseTitle('My Toys')
     const {user} =useContext(AuthContext)
 
     const [toy,setToy] =useState([])
-    const url =`http://localhost:5005/myToys?email=${user?.email}`
+    const url =`https://toy-hunter-server-eight.vercel.app/myToys?email=${user?.email}`
     useEffect(() => {
         fetch(url)
           .then((res) => res.json())
@@ -18,6 +18,8 @@ UseTitle('My Toys')
           });
       },[url]);
 console.log(toy)
+
+
 
 
     return (

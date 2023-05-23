@@ -20,7 +20,7 @@ const AddToys = () => {
     console.log(name, img, price, ratings, subCategory , description);
 
 
-    fetch("http://localhost:5005/toysAdd", {
+    fetch("https://toy-hunter-server-eight.vercel.app/toysAdd", {
       method: "POST",
       headers: {
         "content-type": "application/json",

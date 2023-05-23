@@ -8,7 +8,7 @@ const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
     const [search, setSearch] = useState("");
     useEffect(() => {
-        fetch("http://localhost:5005/toysAdd")
+        fetch("https://toy-hunter-server-eight.vercel.app/toysAdd")
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -17,7 +17,7 @@ const AllToys = () => {
       }, []);
 
       const handleSearchBar = () => {
-        fetch(`http://localhost:5005/getToys/${search}`)
+        fetch(`https://toy-hunter-server-eight.vercel.app/getToys/${search}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

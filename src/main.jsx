@@ -40,22 +40,21 @@ const router = createBrowserRouter([
       },
       {
         path:'/addToys',
-        element:<AddToys></AddToys>
+        element:<PrivateRouter><AddToys></AddToys></PrivateRouter>
       },
       {
         path:'/myToys',
-        element:<MyToys></MyToys>
+        element:<PrivateRouter><MyToys></MyToys></PrivateRouter>
       },
       {
         path:'/allToys',
         element:<PrivateRouter><AllToys></AllToys></PrivateRouter>,
-        loader:()=>fetch('http://localhost:5005/toysAdd')
 
       },
       {
         path:'/toys/:id',
         element:<PrivateRouter><ToyDetails></ToyDetails></PrivateRouter>,
-        loader:({params})=>fetch(`http://localhost:5005/toys/${params.id}`)
+        loader:({params})=>fetch(`https://toy-hunter-server-eight.vercel.app/toys/${params.id}`)
       },
       {
         path:'/blog',

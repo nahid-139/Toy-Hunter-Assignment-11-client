@@ -9,7 +9,7 @@ const Toys = () => {
 
     const [toys, setToys] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5005/toys")
+        fetch("https://toy-hunter-server-eight.vercel.app/toys")
             .then((response) => response.json())
             .then((data) => setToys(data));
     }, []);
